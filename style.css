@@ -32,7 +32,9 @@ body{
     padding: 40px;
     margin:100px auto 60px;
     position:relative;
-
+    background-color: #482b2e;
+    color: #710c0c;
+     box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 
 #clock .display{ 
@@ -41,10 +43,10 @@ body{
   border-radius:6px;
   position:relative;
   height: 54px;
-  background-color: #482b2e;
-  color: #710c0c;
-  box-shadow:0 4px 10px rgba(0,0,0,0.3);
+   background-color:#0f1620;
+  box-shadow:0 1px 1px rgba(0,0,0,0.08) inset, 0 1px 1px #49586b; 
 }
+
 
 #clock .digits div.zero:first-child {
   opacity: 0; 
@@ -61,4 +63,19 @@ body{
 #clock.dark .digits div span{
   background-color:#710c0c;
   border-color:#710c0c;  
+}
+
+#clock .weekdays{
+  font-size:60;
+  position:absolute;
+  width:100%;
+  top:10px;
+  left:0;
+  text-align:center;
+  font-family:Arial, Verdana, Segoe UI; 
+}
+
+#clock .weekdays span{
+  opacity:0.2; 
+  padding:0 10px;
 }
