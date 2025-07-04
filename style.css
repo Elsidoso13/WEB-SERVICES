@@ -2,6 +2,9 @@ body{
     background-color: #121d25;
     margin: 2px;
     padding: 2px;
+    text-align:center;
+    font-family:Arial, Verdana, Segoe UI; 
+
     
 }
 #start-menu{
@@ -78,4 +81,12 @@ body{
 #clock .weekdays span{
   opacity:0.2; 
   padding:0 10px;
+}
+
+#clock .ampm{
+  position:absolute;
+  bottom:20px;
+  right:20px;
+  font-size:12px;
+  font-family:Arial, Verdana, Segoe UI;
 }
