@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", () => {
 const formatSwitchBtn = document.querySelector(".format-switch-btn");
 const dotmenuBtn = document.querySelector(".dot-menu-btn");
 const dotMenu = document.querySelector(".dot-menu");
@@ -56,4 +57,5 @@ document.addEventListener("click", (e) => {
   if (!e.target.closest(".dot-menu-btn") && !e.target.closest(".dot-menu")) {
     dotMenu.classList.remove("active");
   }
+});
 });
