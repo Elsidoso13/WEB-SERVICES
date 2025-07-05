@@ -1,59 +1,59 @@
-    const formatSwitchBtn = document.querySelector(".format-switch-btn");
+const formatSwitchBtn = document.querySelector(".format-switch-btn");
+const dotmenuBtn = document.querySelector(".dot-menu-btn");
+const dotMenu = document.querySelector(".dot-menu");
 
-    formatSwitchBtn.addEventListener("click", () => {
-      formatSwitchBtn.classList.toggle("active");
-      const format = formatSwitchBtn.getAttribute("date-format");
-      formatSwitchBtn.setAttribute("date-format", format === "12" ? "24" : "12");
-    });
+formatSwitchBtn.addEventListener("click", () => {
+  formatSwitchBtn.classList.toggle("active");
+  const format = formatSwitchBtn.getAttribute("date-format");
+  formatSwitchBtn.setAttribute("date-format", format === "12" ? "24" : "12");
+});
 
-    function clock() {
-      const today = new Date();
-      let hours = today.getHours();
-      let minutes = today.getMinutes();
-      let seconds = today.getSeconds();
-      let period = "AM";
+function clock() {
+  const now = new Date();
 
-      const format = formatSwitchBtn.getAttribute("date-format");
+  // Hora
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  let seconds = now.getSeconds();
+  let period = "AM";
 
-      if (hours >= 12) period = "PM";
-      if (format === "12") {
-        hours = hours % 12 || 12;
-      }
+  const format = formatSwitchBtn.getAttribute("date-format");
 
-      hours = hours < 10 ? "0" + hours : hours;
-      minutes = minutes < 10 ? "0" + minutes : minutes;
-      seconds = seconds < 10 ? "0" + seconds : seconds;
+  if (hours >= 12) period = "PM";
+  if (format === "12") {
+    hours = hours % 12 || 12;
+  }
 
-      document.querySelector(".hours").innerHTML = hours;
-      document.querySelector(".minutes").innerHTML = minutes;
-      document.querySelector(".seconds").innerHTML = seconds;
-      document.querySelector(".period").innerHTML = format === "12" ? period : "";
-    }
+  hours = hours < 10 ? "0" + hours : hours;
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+  seconds = seconds < 10 ? "0" + seconds : seconds;
 
-    setInterval(clock, 1000);
-    clock();
+  document.querySelector(".hours").innerHTML = hours;
+  document.querySelector(".minutes").innerHTML = minutes;
+  document.querySelector(".seconds").innerHTML = seconds;
+  document.querySelector(".period").innerHTML = format === "12" ? period : "";
 
-    // Fecha
-    const today = new Date();
-    const dayNum = today.getDate();
-    const year = today.getFullYear();
-    const dayName = today.toLocaleString("default", { weekday: "long" });
-    const monthName = today.toLocaleString("default", { month: "short" });
+  // Fecha
+  const dayNum = now.getDate();
+  const year = now.getFullYear();
+  const dayName = now.toLocaleString("default", { weekday: "long" });
+  const monthName = now.toLocaleString("default", { month: "short" });
 
-    document.querySelector(".month-name").innerHTML = monthName;
-    document.querySelector(".day-name").innerHTML = dayName;
-    document.querySelector(".day-num").innerHTML = dayNum;
+  document.querySelector(".month-name").innerHTML = monthName;
+  document.querySelector(".day-name").innerHTML = dayName;
+  document.querySelector(".day-num").innerHTML = dayNum;
+}
 
-    // Menú de opciones
-    const dotmenuBtn = document.querySelector(".dot-menu-btn");
-    const dotMenu = document.querySelector(".dot-menu");
+setInterval(clock, 1000);
+clock();
 
-    dotmenuBtn.addEventListener("click", () => {
-      dotMenu.classList.toggle("active");
-    });
+// Menú de opciones
+dotmenuBtn.addEventListener("click", () => {
+  dotMenu.classList.toggle("active");
+});
 
-    document.addEventListener("click", (e) => {
-      if (!e.target.closest(".dot-menu-btn") && !e.target.closest(".dot-menu")) {
-        dotMenu.classList.remove("active");
-      }
-    });
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".dot-menu-btn") && !e.target.closest(".dot-menu")) {
+    dotMenu.classList.remove("active");
+  }
+});
