@@ -10,27 +10,88 @@
  <script src="reloj.js"></script>
 </head>
 <body>
-  <div class="digital-clock">
-    <div class="dot-menu-btn">☰</div>
-    <ul class="dot-menu">
-      <li class="menu-item">
-        <span class="clock-format-text">Formato</span>
-        <div class="format-switch-btn" date-format="24"></div>
-      </li>
-    </ul>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <svg class="logo" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#4e0d3c;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#353e54;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <rect x="5" y="15" width="110" height="30" rx="5" fill="url(#logoGradient)" stroke="#353e54" stroke-width="2"/>
+        <text x="60" y="35" text-anchor="middle" fill="#000" font-family="Press Start 2P" font-size="8">VHS RETRO</text>
+        <circle cx="20" cy="10" r="3" fill="#4e0d3c"/>
+        <circle cx="100" cy="10" r="3" fill="#4e0d3c"/>
+        <rect x="10" y="50" width="20" height="8" rx="2" fill="#353e54"/>
+        <rect x="90" y="50" width="20" height="8" rx="2" fill="#353e54"/>
+      </svg>
+    </div>
 
-    <div class="time">
-      <span class="hours">00</span><span class="dots">:</span><span class="minutes">00</span>
-      <div class="right-side">
-        <div class="period">AM</div>
-        <div class="seconds">00</div>
+    <!-- Contenido Principal -->
+    <div class="main-content">
+      <!-- Reloj Digital -->
+      <div class="digital-clock">
+        <div class="dot-menu-btn">☰</div>
+        <ul class="dot-menu">
+          <li class="menu-item">
+            <span class="clock-format-text">Formato</span>
+            <div class="format-switch-btn" data-format="24"></div>
+          </li>
+        </ul>
+
+        <div class="time">
+          <span class="hours">00</span><span class="dots">:</span><span class="minutes">00</span>
+          <div class="right-side">
+            <div class="period">AM</div>
+            <div class="seconds">00</div>
+          </div>
+        </div>
+
+        <div class="calender">
+          <span class="month-name">--- </span>
+          <span class="day-name">---</span>
+          <span class="day-num">00</span>
+        </div>
+      </div>
+
+      <!-- Sección de Streaming -->
+      <div class="streaming-section">
+        <h2 class="streaming-title">🎬 CONTENIDO RETRO STREAMING</h2>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="streaming-link" target="_blank">
+          ▶ VER VIDEO EN YOUTUBE
+        </a>
       </div>
     </div>
 
-    <div class="calender">
-      <span class="month-name">--- </span>
-      <span class="day-name">---</span>
-      <span class="day-num">00</span>
+    <!-- Footer -->
+    <div class="footer">
+      <div class="footer-content">
+        <div class="footer-item">
+          <strong>CURSO:</strong>
+          Plataformas como Servicio<br>
+          Tecnologías Web Modernas
+        </div>
+        <div class="footer-item">
+          <strong>ESTUDIANTE:</strong>
+          Juan Carlos Pérez González<br>
+          Código: 2024-WEB-001
+        </div>
+        <div class="footer-item">
+          <strong>CONTACTO:</strong>
+          <a href="mailto:juan.perez@email.com">juan.perez@email.com</a><br>
+          <a href="tel:+523331234567">+52 333 123 4567</a>
+        </div>
+        <div class="footer-item">
+          <strong>PROYECTO:</strong>
+          Reloj Digital VHS Retro<br>
+          Versión 1.0 - 2025
+        </div>
+      </div>
+      <div class="copyright">
+        © 2025 VHS Retro Clock. Proyecto educativo desarrollado con tecnologías web.
+      </div>
     </div>
   </div>
 
