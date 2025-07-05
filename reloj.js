@@ -90,14 +90,75 @@ document.addEventListener("DOMContentLoaded", () => {
         btn.innerHTML = originalText;
         btn.disabled = false;
         
-        alert('🎬 Vista previa del video:\n\n' +
-              '📁 Archivo: Actividad3_FranciscoMora.mp4\n' +
-              '🎥 Resolución: 1920x1080 (Full HD)\n' +
-              '⏱️ Duración: 5:30 minutos\n' +
-              '📊 Tamaño: 45.2 MB\n' +
-              '🎬 Codec: H.264\n' +
-              '🔊 Audio: AAC 48kHz\n\n' +
-              '✅ Estado: Disponible para reproducción');
+        // Crear modal para mostrar el video
+        const modal = document.createElement('div');
+        modal.style.cssText = `
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.9);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 10000;
+        `;
+        
+        const videoContainer = document.createElement('div');
+        videoContainer.style.cssText = `
+          position: relative;
+          width: 80%;
+          max-width: 900px;
+          background: #fff;
+          border-radius: 15px;
+          overflow: hidden;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        `;
+        
+        const closeBtn = document.createElement('button');
+        closeBtn.innerHTML = '✕';
+        closeBtn.style.cssText = `
+          position: absolute;
+          top: 10px;
+          right: 15px;
+          background: rgba(255, 255, 255, 0.9);
+          border: none;
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          font-size: 16px;
+          cursor: pointer;
+          z-index: 10001;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        `;
+        
+        const iframe = document.createElement('iframe');
+        iframe.src = 'https://drive.google.com/file/d/17pS1u53qRP95SVrQvm9mPGsnx74EOhyp/preview';
+        iframe.style.cssText = `
+          width: 100%;
+          height: 500px;
+          border: none;
+        `;
+        
+        // Cerrar modal
+        closeBtn.addEventListener('click', () => {
+          document.body.removeChild(modal);
+        });
+        
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) {
+            document.body.removeChild(modal);
+          }
+        });
+        
+        videoContainer.appendChild(closeBtn);
+        videoContainer.appendChild(iframe);
+        modal.appendChild(videoContainer);
+        document.body.appendChild(modal);
+        
       }, 2000);
     }
 
