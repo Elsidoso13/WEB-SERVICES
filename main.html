@@ -10,7 +10,7 @@
  <script src="reloj.js"></script>
 </head>
 <body>
-  <div class="container">
+<div class="container">
     <!-- Header -->
     <div class="header">
       <svg class="logo" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
@@ -59,9 +59,63 @@
       <!-- Sección de Streaming -->
       <div class="streaming-section">
         <h2 class="streaming-title">🎬 CONTENIDO RETRO STREAMING</h2>
-        <a href="https://drive.google.com/file/d/17pS1u53qRP95SVrQvm9mPGsnx74EOhyp/view?usp=sharing" class="streaming-link" target="_blank">
-          ▶ VER VIDEO EN YOUTUBE
-        </a>
+        
+        <!-- Video Preview Container -->
+        <div class="video-preview-container">
+          <div class="video-thumbnail">
+            <div class="video-preview">
+              <div class="video-content">
+                <div class="drive-logo">
+                  <svg width="32" height="32" viewBox="0 0 32 32">
+                    <path d="M10.5 4L20.5 4C22.985 4 25 6.015 25 8.5L25 18.5C25 20.985 22.985 23 20.5 23L10.5 23C8.015 23 6 20.985 6 18.5L6 8.5C6 6.015 8.015 4 10.5 4Z" fill="#4e0d3c"/>
+                    <path d="M15.5 8L20.5 8C21.328 8 22 8.672 22 9.5L22 14.5C22 15.328 21.328 16 20.5 16L15.5 16C14.672 16 14 15.328 14 14.5L14 9.5C14 8.672 14.672 8 15.5 8Z" fill="#353e54"/>
+                    <path d="M16 12L20 12" stroke="#4e0d3c" stroke-width="1"/>
+                    <path d="M16 10L20 10" stroke="#4e0d3c" stroke-width="1"/>
+                    <path d="M16 14L20 14" stroke="#4e0d3c" stroke-width="1"/>
+                  </svg>
+                </div>
+                <h3 class="video-title">Actividad 3 - Plataformas como Servicio</h3>
+                <p class="video-description">
+                  📁 Alojado en Google Drive<br>
+                  🎥 Desarrollo de aplicaciones web en servicios de la nube<br>
+                  📚 Conceptualización y implementación de soluciones tecnológicas
+                </p>
+                <div class="video-info">
+                  <span class="video-duration">🕐 Duración: 5:30</span>
+                  <span class="video-author">👤 Francisco Emmanuel Mora</span>
+                  <span class="video-size">📊 Tamaño: 45.2 MB</span>
+                  <span class="video-format">🎬 Formato: MP4 (1080p)</span>
+                </div>
+              </div>
+              <div class="play-button">
+                <div class="play-icon">▶</div>
+                <div class="drive-badge">Drive</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="video-controls">
+            <button class="video-btn primary" onclick="openDriveVideo()">
+              🚀 ABRIR EN DRIVE
+            </button>
+            <button class="video-btn secondary" onclick="previewVideo()">
+              👁️ VISTA PREVIA
+            </button>
+            <button class="video-btn tertiary" onclick="shareDriveLink()">
+              🔗 COMPARTIR ENLACE
+            </button>
+          </div>
+          
+          <div class="drive-info">
+            <div class="drive-status">
+              <span class="status-indicator online"></span>
+              <span class="status-text">Disponible en línea</span>
+            </div>
+            <div class="drive-access">
+              <span class="access-text">🔒 Acceso: Enlace compartido</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -80,7 +134,7 @@
         </div>
         <div class="footer-item">
           <strong>CONTACTO:</strong>
-          <a href="francisco.mora4225@alumnos.udg.mx">francisco.mora4225@alumnos.udg.mx</a><br>
+          <a href="mailto:francisco.mora4225@alumnos.udg.mx">francisco.mora4225@alumnos.udg.mx</a><br>
           <a href="tel:+523332525626">+52 33 3252 5626</a>
         </div>
         <div class="footer-item">
@@ -94,6 +148,5 @@
       </div>
     </div>
   </div>
-
 </body>
 </html>
