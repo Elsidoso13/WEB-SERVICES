@@ -64,7 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
     function openDriveVideo() {
       const driveUrl = "https://drive.google.com/file/d/17pS1u53qRP95SVrQvm9mPGsnx74EOhyp/view?usp=sharing";
       
-      // Simular apertura en Drive
       const btn = document.querySelector('.video-btn.primary');
       const originalText = btn.innerHTML;
       
@@ -75,13 +74,8 @@ document.addEventListener("DOMContentLoaded", () => {
         btn.innerHTML = originalText;
         btn.disabled = false;
         
-        // En una implementación real, aquí se abriría el enlace real de Drive
-        const confirmOpen = confirm('¿Abrir el video en Google Drive?\n\nEsto abrirá una nueva ventana con el contenido del video.');
-        
-        if (confirmOpen) {
-          // Aquí pondrías tu enlace real de Drive
-          window.open('https://drive.google.com/file/d/17pS1u53qRP95SVrQvm9mPGsnx74EOhyp/view?usp=sharing', '_blank');
-        }
+        // Abrir directamente el enlace de Drive sin confirmación
+        window.open(driveUrl, '_blank');
       }, 1500);
     }
 
