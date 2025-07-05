@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 document.addEventListener("DOMContentLoaded", () => {
       const formatSwitchBtn = document.querySelector(".format-switch-btn");
       const dotmenuBtn = document.querySelector(".dot-menu-btn");
@@ -188,7 +187,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }, 1000);
     }
-=======
     const formatSwitchBtn = document.querySelector(".format-switch-btn");
 
     formatSwitchBtn.addEventListener("click", () => {
@@ -250,11 +248,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-
-
-
-
-
-
-
->>>>>>> c810d203b7e95a0556794bdc60d8cc461ffaefd2
