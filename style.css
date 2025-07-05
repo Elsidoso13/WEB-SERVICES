@@ -84,7 +84,7 @@
 
     .format-switch-btn.active::before {
       transform: translateX(18px);
-      background: #1affd5;
+      background: #4e0d3c;
     }
 
     .time {
